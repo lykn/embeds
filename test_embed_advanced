@@ -1,18 +1,10 @@
 The following JSON is an example of using rich embeds using the one of the rich embed creator cogs. If you want to customize the color of the embed, you will need to go to the following website: [ColorHexa](https://www.colorhexa.com) - and convert the HEX/RGB value of the color into decimal and use that for the color value for your embed.
 
-**NOTE:** Timestamp should work if you use the ISO 8601 format, for example: *2020-08-31T07:03:16+0000*. You can go to [UTC Time](https://utctime.net) to get the current time in the format required. For more explanation on the formatting, refer to [this guide from IONOS](https://www.ionos.com/digitalguide/websites/web-development/iso-8601/) in the structure to create your own time.
-
-*\n* - If you see these, they are simply new lines and you can specify multiple, like "\n\n\n" to create three new lines in your embed.
-
-[DiscoHook](https://discohook.org) is a good website if you want to get an online visualization of your embed or to get a JSON formatted embed. You will need to tweak it some, otherwise it will error when you use it. Refer to the example below for valid fields and formatting.
-
-The example below is provided in the event you want to start quickly customizing your own embeds without the need of such a visualizer.
-
 ```json 
 {
   "title":"Test JSON Embed",
   "color":"#00FFFF",
-  "url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "url":"https://website.com",
   "description":"This embed is an example of a basic feature rich embed\n\nNew lines can be added by adding a `\n`\n`Code Block` are also supported\n`**Bold**`**is supported**\n`*Italics*` *are also supported*\n`__Underline__` __also works__\n\n[Hyperlinks](https://www.github.com/) also works!\n\nYou can also use emojis. Default ones like :one: or :two: would work normally. While custom ones like <a:thonking:873475795400658944>, can be used but, by adding a `\` before the emoji's first `:`(EG: `\:emoji_name:`).\nThe emoji would transform to this format `<a:emoji_name:{a_bunch_of_numbers}>`", 
   "fields": [
   {
