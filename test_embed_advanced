@@ -1,45 +1,53 @@
 The following JSON is an example of using rich embeds using the one of the rich embed creator cogs. If you want to customize the color of the embed, you will need to go to the following website: [ColorHexa](https://www.colorhexa.com) - and convert the HEX/RGB value of the color into decimal and use that for the color value for your embed.
 
-```json 
+**NOTE:** Timestamp should work if you use the ISO 8601 format, for example: *2020-08-31T07:03:16+0000*. You can go to [UTC Time](https://utctime.net) to get the current time in the format required. For more explanation on the formatting, refer to [this guide from IONOS](https://www.ionos.com/digitalguide/websites/web-development/iso-8601/) in the structure to create your own time.
+
+*\n* - If you see these, they are simply new lines and you can specify multiple, like "\n\n\n" to create three new lines in your embed.
+
+[DiscoHook](https://discohook.org) is a good website if you want to get an online visualization of your embed or to get a JSON formatted embed. You will need to tweak it some, otherwise it will error when you use it. Refer to the example below for valid fields and formatting.
+
+The example below is provided in the event you want to start quickly customizing your own embeds without the need of such a visualizer.
+
+```json
 {
-  "title":"Test JSON Embed",
-  "color":"#00FFFF",
-  "url":"https://website.com",
-  "description":"This embed is an example of a basic feature rich embed\n\nNew lines can be added by adding a `\n`\n`Code Block` are also supported\n`**Bold**`**is supported**\n`*Italics*` *are also supported*\n`__Underline__` __also works__\n\n[Hyperlinks](https://www.github.com/) also works!\n\nYou can also use emojis. Default ones like :one: or :two: would work normally. While custom ones like <a:thonking:873475795400658944>, can be used but, by adding a `\` before the emoji's first `:`(EG: `\:emoji_name:`).\nThe emoji would transform to this format `<a:emoji_name:{a_bunch_of_numbers}>`", 
-  "fields": [
-  {
-    "name":"Field A",
-    "value":"This field is __not__ inline"
-  },
-  {
-    "name":"Field B",
-    "value":"This field is also not in a line"
-  },
-  {
-    "name":"Field C",
-    "value":"But, this field __is inline__",
-    "inline":"true"
-  },
-  {
-    "name":"Field D",
-    "value":"And, so is this one!",
-    "inline":"true"
-  }
- ],
- "author": { 
-     "name":"Lykn",
-     "url":"https://www.github.com/lykn/",
-     "icon_url":"https://images-ext-1.discordapp.net/external/E7AVN-NDLGG7RDUthVklziwBDjlMeTZdN9TX-SJhJ7g/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/779347811099475978/a_b34da4dffa6c02a7d3f3e98698caa1eb.gif?width=364&height=364"
-     },
- "footer": {
-     "text":"This is the footer. Footer text appears here. Custom emojis, and text modifications __won't__ work here",
-     "icon_url":"https://www.link.to/some/image.png"
-  },
-  "image": {
-     "url":"https://www.link.to/some/image.png"
-    },
-  "thumbnail": {
-   "url":"https://www.link.to/some/image.png"
-   }
+    "title": "JSON Example Embed",
+    "description": "This embed is an example to show various features that can be used in a rich embed.\n\nNew lines are easy to make. `Code Blocks` are also supported.\n`*Italics*` *are supported*.\n`**Bold**` **is supported**.\n`__Underline__` __also works__.\n\n[Markdown](https://github.com) with text hyperlinks works too.\n\nYou can also declare emoji. Default ones like :one: or :two: should work normally. For custom emoji, put a backslash in front of it like so: `\\:custom_emote:`\nYou should see something like this show up: `<:custom_emote:123456789012345678>`.",
+    "url": "https://website.com",
+    "color": 2616205,
+    "fields": [
+        {
+            "name": "Field 1",
+            "value": "This field is not within a line."
+       },
+        {
+            "name": "Field 2",
+            "value": "This is also not inline."
+        },
+        {
+            "name": "Field 3",
+            "value": "This field will be inline.",
+            "inline": true
+        },
+        {
+            "name": "Field 4",
+            "value": "This field is also within a line.",
+            "inline": true
+        }
+    ],
+    "author": {
+            "name": "TwinShadow",
+            "url": "https://website.com",
+            "icon_url": "https://link.to/some/image.png"
+        },
+            "footer": {
+            "text": "Footer text",
+            "icon_url": "https://link.to/some/image.png"
+        },
+            "image": {
+            "url": "https://link.to/some/image.png"
+        },
+            "thumbnail": {
+            "url": "https://link.to/some/image.png"
+        }
 }
 ```
