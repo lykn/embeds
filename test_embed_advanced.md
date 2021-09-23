@@ -1,6 +1,7 @@
 The following JSON is an example of using rich embeds using the one of the rich embed creator cogs. If you want to customize the color of the embed, you will need to go to the following website: [ColorHexa](https://www.colorhexa.com) - and convert the HEX/RGB value of the color into decimal and use that for the color value for your embed.
 
-```json {
+```json 
+{
   "title":"Test JSON Embed",
   "color":"#00FFFF",
   "url":"https://website.com",
