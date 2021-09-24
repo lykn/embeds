@@ -16,9 +16,9 @@ Reach out to me on Discord at `Lykn#0001` for anything
 
 ```
 {embed({
- "title":"The Title Of the Embed goes Here",
- "color":"#00FFFF", 
- "description":"This embed is an example of a basic feature rich embed\n\nNew lines can be added by adding a `\n`\n`Code Block` are also supported\n`**Bold**`**is supported**\n`*Italics*` *are also supported*\n`__Underline__` __also works__\n\n[Hyperlinks](https://www.github.com/) also works!\n\nYou can also use emojis. Default ones like :one: or :two: would work normally. While custom ones, can be used but, by adding a `\` before the emoji's first `:`(EG: `\:emoji_name:`).\nThe emoji would transform to this format `<a:emoji_name:{a_bunch_of_numbers}>`",
+      "title":"The Title Of the Embed goes Here",
+      "color":65535,
+      "description":"This embed is an example of a basic feature rich embed\n\nNew lines can be added by adding a `\n`\n`Code Block` are also supported\n`**Bold**`**is supported**\n`*Italics*` *are also supported*\n`__Underline__` __also works__\n\n[Hyperlinks](https://www.github.com/) also works!\n\nYou can also use emojis. Default ones like :one: or :two: would work normally. While custom ones, can be used but, by adding a `\\` before the emoji's first `:`(EG: `\\:emoji_name:`).\nThe emoji would transform to this format `<a:emoji_name:{a_bunch_of_numbers}>`",
  "footer": {
  "text":"Footer text appears here",
  "icon_url":"{author(avatar)}"
