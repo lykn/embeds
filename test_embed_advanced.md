@@ -3,9 +3,9 @@ The following JSON is an example of using rich embeds using the one of the rich 
 ```json 
 {
   "title":"Test JSON Embed",
+  "description":"This embed is an example of a basic feature rich embed\n\nNew lines can be added by adding a `\n`\n`Code Block` are also supported\n`**Bold**`**is supported**\n`*Italics*` *are also supported*\n`__Underline__` __also works__\n\n[Hyperlinks](https://www.github.com/) also works!\n\nYou can also use emojis. Default ones like :one: or :two: would work normally. While custom ones like <a:thonking:873475795400658944>, can be used but, by adding a `\` before the emoji's first `:`(EG: `\:emoji_name:`).\nThe emoji would transform to this format `<a:emoji_name:{a_bunch_of_numbers}>`",
+  "url":"https://www.website.com/",
   "color":"#00FFFF",
-  "url":"https://website.com",
-  "description":"This embed is an example of a basic feature rich embed\n\nNew lines can be added by adding a `\n`\n`Code Block` are also supported\n`**Bold**`**is supported**\n`*Italics*` *are also supported*\n`__Underline__` __also works__\n\n[Hyperlinks](https://www.github.com/) also works!\n\nYou can also use emojis. Default ones like :one: or :two: would work normally. While custom ones like <a:thonking:873475795400658944>, can be used but, by adding a `\` before the emoji's first `:`(EG: `\:emoji_name:`).\nThe emoji would transform to this format `<a:emoji_name:{a_bunch_of_numbers}>`", 
   "fields": [
   {
     "name":"Field A",
