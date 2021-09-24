@@ -14,6 +14,8 @@ Make sure to add a `,` after every single `"` and look for braces which have not
 
 Reach out to me on Discord at `Lykn#0001` for anything
 
+The following example shows you how to implement an embed into your tag or anywhere else. Basically meaning, it shows you how an embed words when you use it for a custom tag or a native action, but, when implementing. This will not work then you say `[p]embed json`, but, th
+
 ```
 {embed({
       "title":"The Title Of the Embed goes Here",
