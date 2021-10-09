@@ -2,7 +2,7 @@ Sending embeds is as easy as JSON or maybe easier.
 
 When a Discord Bot responds in your server it's always those boring messages which it sends. Well, Discord has added a feature called `embeds` which spices things up in the message. Text markdowns and hyperlinking are just one of the numerous features of an embed.
 
-This repo written and maintained by `Lykn#0009` shows the features of an embed, with s full detailed explanation for everything.
+This repo written and maintained by `Lykn#0009` shows the features of an embed, with a full detailed explanation for everything.
 
 Main Links:
  - [ColorHexa](https://www.colorhexa.com/) will help you pick colors for your embed(s)
@@ -55,7 +55,7 @@ What a basic embed has:
 
 Basic Code:
 ```py
-discord.Embed(
+em = discord.Embed(
 title = "Embed Title",
 color = "#00FFFF" # Makes the embed color to cyan and not the default black
 )
@@ -63,7 +63,7 @@ color = "#00FFFF" # Makes the embed color to cyan and not the default black
 
 Now the url. `url` is just a hyper link for the title(hyperlinks the entire string of text)
 ```py
-discord.Embed(
+em = discord.Embed(
 title = "Embed Title",
 color = "#00FFFF",
 url = "https://www.github/lykn/" # Hyperlinks the text "Embed Title" with my(Lykn's) github profile
@@ -77,11 +77,46 @@ Supposing you don't know hex codes and don't want to get your hands dirty with i
 Insted of going `color = "#00FFFF"`, to get a blue*ish* cyan Discord has a preset pallete of colors and for our example shows before it is `discord.Color.blue()`
 Putting this to the test with a code
 ```py
-discord.Embed(
+em = discord.Embed(
 title = "Embed Title",
 color = discord.Color.blue(), # You don't add the `""` when you use `discord.Color` but you need to add a `()` right after the color. Also the `,` is constant for everything because that's what differentiates between the different categories
 url = "https://www.github/lykn/" 
 )
 ```
 Some points to not when you use `discord.Color`
- - Don't add the text 
+ - Don't add the two `""` when using this 
+ - Make sure to add the `()` at the end 
+ - Format: `discord.Color.<color_name>()`
+ -
+ 
+**3. Adding an `author`**
+
+What is an author?
+> The text that appears on the top of the embed is know as the `author` area. Basically its just a "fancy" way to call a `header`
+
+Basic Code:
+```py
+em = discord.Embed(
+title = "Embed Title",
+color = discord.Color.blue(), # You don't add the `""` when you use `discord.Color` but you need to add a `()` right after the color. Also the `,` is constant for everything because that's what differentiates between the different categories
+url = "https://www.github/lykn/" 
+)
+em.set_author(name = "Lykn#0009", icon_url = "https://www.link.to/some/image.png", url = "https://github.com/lykn/") # Here the `author` has to be `set` and not `add`ed because it's a default field(option - if you don't want to get confused)
+```
+Things to note:
+ - Text markdowns don't work here 
+ - Code blocking won't work here
+ - If you would wise to copy past text from websites like [LingoJam](http://www.lingojam/com/) works
+
+If you would like to use the user's `icon_url` and `name` as the header then follow the below code(as a command) using `ctx`(`message` can also be used)
+Code:
+```py
+@client.command() # `client` has been used, but, this can also be replaced with `bot` or anything you use in the `______ = commands.Bot(command_prefix = "")` part
+async def embed(ctx):
+ em = discord.Embed(
+title = "Embed Title",
+color = discord.Color.blue(), # You don't add the `""` when you use `discord.Color` but you need to add a `()` right after the color. Also the `,` is constant for everything because that's what differentiates between the different categories
+url = "https://www.github/lykn/" 
+)
+ em.set_author(name = "Lykn#0009", icon_url = "https://www.link.to/some/image.png", url = "https://github.com/lykn/") # Here the `author` has to be `set` and not `add`ed because it's a default field(option - if you don't want to get confused)
+```
