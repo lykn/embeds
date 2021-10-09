@@ -84,3 +84,4 @@ url = "https://www.github/lykn/"
 )
 ```
 Some points to not when you use `discord.Color`
+ - Don't add the text 
