@@ -38,4 +38,41 @@ async def embed(ctx): # Declaration of the command and use `ctx` as the context 
  
  await ctx.send(embed = em) # Here `embed` is constant, but, `em` is not, it will be whatever you use in the first part(`em = discord.Embed`) so make sure to check that
 ```
-The above code signifies a weel sent and utilised embed
+The above code signifies a well utilised embed.
+Now lets start breaking down the components.
+
+**1. A Basic Embed**
+I'm not going to be adding the `on_ready` and commands stuff, but, cutting the chase and going right into the embeds part 
+What a basic embed has:
+ - `title` 
+ - `color` 
+ - `url`
+
+Basic Code:
+```py
+discord.Embed(
+title = "Embed Title",
+color = "#00FFFF" # Makes the embed color to cyan and not the default black
+)
+```
+Now the url. `url` is just a hyper link for the title(hyperlinks the entire string of text)
+```py
+discord.Embed(
+title = "Embed Title",
+color = "#00FFFF",
+url = "https://www.github/lykn/" # Hyperlinks the text "Embed Title" with my(Lykn's) github profile
+)
+```
+When a user click the title Discord will ask the user with a pop saying, "Are you sure you would like to go to **https://www.github/lykn/**"
+
+**2. Tweking the `color` part**
+Supposing you don't know hex codes and don't want to get your hands dirty with it too. Discord has a fix for it.
+Insted of going `color = "#00FFFF"`, to get a blue*ish* cyan Discord has a preset pallete of colors and for our example shows before it is `discord.Color.blue()`
+Putting this to the test with a code
+```py
+discord.Embed(
+title = "Embed Title",
+color = discord.Color.blue(), # You don't add the `""` when you use `discord.Color` but you need to add a `()` right after the color. Also the `,` is constant for everything because that's what differentiates between the different categories
+url = "https://www.github/lykn/" 
+)
+```
