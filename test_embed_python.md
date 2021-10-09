@@ -1,6 +1,9 @@
 Sending embeds is as easy as JSON or maybe easier.
-When a Discord Bot responds in your server it's always those boring messages which it sends. Well, Discord has added a feature called `embeds` which spice things up in the message. Text markdowns and hyperlinking are just one of the many features of an embed.
-This repo written and maintained by `Lykn#0009` shows the features of an embed, with full detailed explanation.
+
+When a Discord Bot responds in your server it's always those boring messages which it sends. Well, Discord has added a feature called `embeds` which spices things up in the message. Text markdowns and hyperlinking are just one of the numerous features of an embed.
+
+This repo written and maintained by `Lykn#0009` shows the features of an embed, with s full detailed explanation for everything.
+
 Main Links:
  - [ColorHexa](https://www.colorhexa.com/) will help you pick colors for your embed(s)
  - Click [here](https://discordpy.readthedocs.io/en/latest/api.html#discord.Embed) for Discord's Official discord.py Docs on `embeds`
@@ -42,7 +45,9 @@ The above code signifies a well utilised embed.
 Now lets start breaking down the components.
 
 **1. A Basic Embed**
-I'm not going to be adding the `on_ready` and commands stuff, but, cutting the chase and going right into the embeds part 
+
+Not going to be adding the `on_ready` and commands stuff, but, cutting the chase and going right into the embeds part 
+
 What a basic embed has:
  - `title` 
  - `color` 
@@ -55,6 +60,7 @@ title = "Embed Title",
 color = "#00FFFF" # Makes the embed color to cyan and not the default black
 )
 ```
+
 Now the url. `url` is just a hyper link for the title(hyperlinks the entire string of text)
 ```py
 discord.Embed(
@@ -66,6 +72,7 @@ url = "https://www.github/lykn/" # Hyperlinks the text "Embed Title" with my(Lyk
 When a user click the title Discord will ask the user with a pop saying, "Are you sure you would like to go to **https://www.github/lykn/**"
 
 **2. Tweking the `color` part**
+
 Supposing you don't know hex codes and don't want to get your hands dirty with it too. Discord has a fix for it.
 Insted of going `color = "#00FFFF"`, to get a blue*ish* cyan Discord has a preset pallete of colors and for our example shows before it is `discord.Color.blue()`
 Putting this to the test with a code
@@ -76,3 +83,4 @@ color = discord.Color.blue(), # You don't add the `""` when you use `discord.Col
 url = "https://www.github/lykn/" 
 )
 ```
+Some points to not when you use `discord.Color`
