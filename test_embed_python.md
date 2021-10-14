@@ -1,4 +1,4 @@
-Sending embeds is as easy as JSON or maybe easier.
+Sending embeds in Python is as easy as JavaScript or maybe easier.
 
 When a Discord Bot responds in your server it's always those boring messages which it sends. Well, Discord has added a feature called `embeds` which spices things up in the message. Text markdowns and hyperlinking are just one of the numerous features of an embed.
 
@@ -106,7 +106,7 @@ em.set_author(name = "Lykn#0009", icon_url = "https://www.link.to/some/image.png
 Things to note:
  - Text markdowns don't work here 
  - Code blocking won't work here
- - If you would wise to copy past text from websites like [LingoJam](http://www.lingojam/com/) works
+ - If you would wise to copy past text from websites like [LingoJam](https://lingojam.com/TextFonts)
 
 If you would like to use the user's `icon_url` and `name` as the header then follow the below code(as a command) using `ctx`(`message` can also be used)
 Code:
@@ -119,4 +119,22 @@ color = discord.Color.blue(), # You don't add the `""` when you use `discord.Col
 url = "https://www.github/lykn/" 
 )
  em.set_author(name = "Lykn#0009", icon_url = "https://www.link.to/some/image.png", url = "https://github.com/lykn/") # Here the `author` has to be `set` and not `add`ed because it's a default field(option - if you don't want to get confused)
+```
+
+
+**4. Adding a `footer`**
+> A footer as the name suggests is what appears on the bottom of the embed
+Basic Attributes:
+ - `text` - String of text what appears
+ - `icon_url` - Image which appears beside(left) the text 
+
+Basic Code:
+```py
+em = discord.Embed(
+title = "Embed Title",
+color = discord.Color.blue(), # You don't add the `""` when you use `discord.Color` but you need to add a `()` right after the color. Also the `,` is constant for everything because that's what differentiates between the different categories
+url = "https://www.github/lykn/" 
+)
+em.set_author(name = "Lykn#0009", icon_url = "https://www.link.to/some/image.png", url = "https://github.com/lykn/") # Here the `author` has to be `set` and not `add`ed because it's a default field(option - if you don't want to get confused)
+em.set_footer(text = "Embed footer comes here!", icon_url = "https://www.link.to/some/image.png") # I'm continuing with the same code after every section by just adding the content of that section to the main code
 ```
